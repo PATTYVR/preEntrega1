@@ -1,0 +1,70 @@
+body{
+    background-color: aqua;
+}
+
+header{
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    margin-top: -5px;
+
+}
+.titulo{
+    color:red;
+    margin-top: 30px;
+}
+.subtitulo{
+    color: goldenrod;
+    margin-top: 30px;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color:wheat;
+    height: 100px;
+    margin-top: -22px
+}
+nav li {
+    list-style-type: none;
+    display: inline;
+    margin-top: 40px;
+
+}
+ nav a {
+    text-decoration: none;
+ }
+
+ footer{
+    background-color: goldenrod;
+    margin-top: 250px;
+    height: 50px;
+    padding: 50px;
+    padding-bottom: 50px;
+
+ }
+ 
+.redes {
+    display: flex;
+    flex-direction: row;
+    justify-content:start;
+    gap: 20px;
+}
+
+.pulseras{
+    border: 5px solid gold;
+    height: 200px;
+    width: 300px;
+}
+
+.pulserasHombre{
+    display: flex;
+    gap: 20px;
+}
+.pulserasMujer{
+    display: flex;
+    gap: 20px;
+}
+
