@@ -4,19 +4,45 @@ function bienvenida(){
  
 bienvenida()
 
-let nombreArete1 = 'Arete1'
-let precioArete1 = 35
-let stockArete1 = 15
+//Metodo filter  y mao
 
-let nombreArete2 = 'Arete2'
-let precioArete2 = 40
-let stockArete2 = 10
+function Producto(nombre, precio, stock){
+   this.nombre = nombre;
+   this.precio = precio;
+   this.stock = stock || 0;
+   this.restarStock = function(cantidad){
+      this.stock -= cantidad
+   }
+   this.sumarStock = function(cantidad){
+      this.stock += cantidad
+   }
+}
 
-let nombreArete3 = 'Arete3'
-let precioArete3 = 25
-let stockArete3 = 20
+let arete1 = new Producto("Arete1", 40, 15)
+let arete2 = new Producto("Arete2", 45, 0)
+let arete3 = new Producto("Arete3", 55, 13)
+let arete4 = new Producto("Arete4", 48, 14)
+let arete5 = new Producto("Arete5", 46, 0)
+let arete6 = new Producto("Arete6", 56, 20)
 
-let precioTotal = 0 
+let listaAretes = [arete1, arete2, arete3, arete4, arete5, arete6]
+
+let listaAretesConStock = listaAretes.filter((prod) => prod.stock > 0)
+
+let listaNombre = listaAretesConStock.map ((prod) => prod.nombre)
+
+console.log(listaAretesConStock)
+
+console.log (listaNombre)
+
+
+
+
+
+
+
+
+/*let precioTotal = 0 
 
 
 alert("Estos son nuestros aretes: \n - Arete1\n - Arete2\n - Arete3")
@@ -56,4 +82,4 @@ else if(opcion == 'Arete3'){
 }
 if(precioTotal != 0){  
    alert ("El precio total es: " + precioTotal)
-}
+}*/

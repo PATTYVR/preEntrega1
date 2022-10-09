@@ -5,74 +5,101 @@ function bienvenida(){
 bienvenida()
 
 
-//Ciclo con for
+//Objetos
 
-let nombrePulseraMujer1 ="Pulsera1"
-let precioPulseraMujer1 = 150
-let stockPulseraMujer1 = 10
+function Producto(nombre, precio, stock){
+   this.nombre = nombre;
+   this.precio = precio;
+   this.stock = stock || 0;
+   this.restarStock = function(cantidad){
+      this.stock -= cantidad
+   }
+}
 
-let nombrePulseraMujer2 ="Pulsera2"
-let precioPulseraMujer2 = 200
-let stockPulseraMujer2 = 20
-
-let nombrePulseraHombre1 ="Pulsera3"
-let precioPulseraHombre1 = 250
-let stockPulseraHombre1 = 15
-
-let nombrePulseraHombre2 ="Pulsera4"
-let precioPulseraHombre2 = 300
-let stockPulseraHombre2 = 15
+let pulseraMujer1  = new Producto("Pulsera1", 150, 10)
+let pulseraMujer2  = new Producto("Pulsera2", 200, 15)
+let pulseraMujer3  = new Producto("Pulsera3", 230, 14)
+let pulseraHombre1 = new Producto("Pulsera4", 250, 15)
+let pulseraHombre2 = new Producto("Pulsera5", 300, 0)
+let pulseraHombre3 = new Producto("Pulsera6", 320, 16)
 
 let precioTotal = 0
 
-alert("Estos son nuestras pulseras: \n - Pulsera1\n - Pulsera2\n - Pulsera3\n - Pulsera4")
+alert("Estos son nuestras pulseras: \n - Pulsera1\n - Pulsera2\n - Pulsera3\n - Pulsera4\n - Pulsera5\n - Pulsera6")
 
-let cantidadCompra = prompt("Que cantidad de pulseras quiere comprar:")
+function calculoPrecio(cantidad, precio){
+precioTotal += (cantidad * precio) 
+}
+function calculoStock(cantidad, stock, precio){
+if(cantidad <= stock){
+   calculoPrecio(cantidad, precio)
+}
+else{
+   alert("Actualmente tenemos " + stock + "unidades de este producto")
+}
+}
+
+let cantidadCompra = parseInt(prompt("Que cantidad de pulseras distintas desea comprar:"))
 
 for(let i = 0; i < cantidadCompra; i = i + 1){
 
-let productoCompra = prompt("Ingrese que pulseras quiere comprar: \n - Pulsera1\n - Pulsera2\n - Pulsera3\n - Pulsera4")
+   let productoCompra = prompt("Ingrese que pulsera quiere comprar: \n - Pulsera1\n - Pulsera2\n - Pulsera3\n - Pulsera4\n - Pulsera5\n - Pulsera6" )
 
+   if (productoCompra.toLowerCase() == 'pulsera1'){
+      let cantidadProductopulseraMujer1 = prompt("Ingrese que cantidad de " + pulseraMujer1.nombre + " desea comprar:")
+      calculoStock(cantidadProductopulseraMujer1, pulseraMujer1.stock, pulseraMujer1.precio)
+      pulseraMujer2.restarStock(cantidadProductopulseraMujer1)
+   }
 
-if(productoCompra.toLowerCase() == 'pulsera1'){
-   let cantidadProductoPulsera1 = prompt("Ingrese que cantidad de " + nombrePulseraMujer1 + " desea comprar:")
-   if(cantidadProductoPulsera1 <=stockPulseraMujer1){
-      precioTotal = precioTotal + (cantidadProductoPulsera1 * precioPulseraMujer1)
+   else if (productoCompra.toLowerCase() == 'pulsera2') {
+      let cantidadProductopulseraMujer2 = prompt("Ingrese que cantidad de " + pulseraMujer2.nombre + " desea comprar:")
+      calculoStock(cantidadProductopulseraMujer2, pulseraMujer2.stock, pulseraMujer2.precio)
+      pulseraMujer2.restarStock(cantidadProductopulseraMujer2)
+   }
+
+   else if (productoCompra.toLowerCase() == 'pulsera3') {
+      let cantidadProductopulseraMujer3 = prompt("Ingrese que cantidad de " + pulseraMujer3.nombre + " desea comprar:")
+      calculoStock(cantidadProductopulseraMujer3, pulseraMujer3.stock, pulseraMujer3.precio)
+      pulseraMujer3.restarStock(cantidadProductopulseraMujer3)
+   }
+   else if (productoCompra.toLowerCase() == 'pulsera4') {
+      let cantidadProductopulseraHombre1 = prompt("Ingrese que cantidad de " + pulseraHombre1.nombre + " desea comprar:")
+      calculoStock(cantidadProductopulseraHombre1, pulseraHombre1.stock, pulseraHombre1.precio)
+      pulseraHombre1.restarStock(cantidadProductopulseraHombre1)
+   }
+
+   else if (productoCompra.toLowerCase() == 'pulsera5') {
+      let cantidadProductopulseraHombre2 = prompt("Ingrese que cantidad de " + pulseraHombre2.nombre + " desea comprar:")
+      calculoStock(cantidadProductopulseraHombre2, pulseraHombre2.stock, pulseraHombre2.precio)
+      pulseraHombre2.restarStock(cantidadProductopulseraHombre2)
+   }
+
+   else if (productoCompra.toLowerCase() == 'pulsera6') {
+      let cantidadProductopulseraHombre3 = prompt("Ingrese que cantidad de " + pulseraHombre3.nombre + " desea comprar:")
+      calculoStock(cantidadProductopulseraHombre3, pulseraHombre3.stock, pulseraHombre3.precio)
+      pulseraHombre3.restarStock(cantidadProductopulseraHombre3)
+   }
+
+   else{
+      alert("No tenemos esa joya a la venta")
+      }
+   }
+
+   if(precioTotal !=0){
+      alert("El precio total es: " + precioTotal)
    }
    else{
-      alert("Actualmente tenemos " + stockPulseraMujer1 + " unidades de este producto")
-   }
-}
-else if(productoCompra.toLowerCase() == 'pulsera2'){
-   let cantidadProductoPulsera2 = prompt("Ingrese que cantidad de " + nombrePulseraMujer2 + " desea comprar:")
-   if(cantidadProductoPulsera2 <=stockPulseraMujer2){
-      precioTotal = precioTotal + (cantidadProductoPulsera2 * precioPulseraMujer2)
-   }
-   else{
-      alert("Actualmente tenemos " + stockPulseraMujer2 + " unidades de este producto")
+      alert("Gracias por su visita")
    }
 
-}
-else if(productoCompra.toLowerCase() == 'pulsera3'){
-   let cantidadProductoPulsera3 = prompt("Ingrese que cantidad de " + nombrePulseraHombre1 + " desea comprar:")
-   if(cantidadProductoPulsera3 <=stockPulseraHombre1){
-      precioTotal = precioTotal +  (cantidadProductoPulsera3 * precioPulseraHombre1)
-   }
-   else{
-      alert("Actualmente tenemos " + stockPulseraHombre1 + " unidades de este producto")
-   }
 
-} 
-else if(productoCompra.toLowerCase() == 'pulsera4'){
-    let cantidadProductoPulsera4 = prompt("Ingrese que cantidad de " + nombrePulseraHombre2 + " desea comprar:")
-    if(cantidadProductoPulsera4 <=stockPulseraHombre2){
-       precioTotal = precioTotal +  (cantidadProductoPulsera4 * precioPulseraHombre2)
-    }
-    else{
-       alert("Actualmente tenemos " + stockPulseraHombre2 + " unidades de este producto")
-    }
- } 
-}
-if(precioTotal != 0){  
-   alert ("El precio total es: " + precioTotal)
-}
+
+
+
+
+
+
+
+
+
+
