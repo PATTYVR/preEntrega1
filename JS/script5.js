@@ -1,15 +1,36 @@
 
-function bienvenida(){
-    alert ("Bienvenidos a Cadenas")
-}
- 
-bienvenida()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 // push y join 
 
-function Producto(nombre, precio, stock){   
+/*function Producto(nombre, precio, stock){   
     this.nombre = nombre;
     this.precio = precio;
     this.stock = stock || 0;  
@@ -38,4 +59,4 @@ for(const prod of listaCadenas){
     }
 }
 
-alert("Estos son nuestros productos: \n - " + listaNombres.join("\n - ")) 
+alert("Estos son nuestros productos: \n - " + listaNombres.join("\n - ")) */

@@ -1,12 +1,20 @@
-function bienvenida(){
-    alert ("Bienvenidos a Aretes")
-}
- 
-bienvenida()
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Metodo filter  y mao
 
-function Producto(nombre, precio, stock){
+/*function Producto(nombre, precio, stock){
    this.nombre = nombre;
    this.precio = precio;
    this.stock = stock || 0;
@@ -33,7 +41,7 @@ let listaNombre = listaAretesConStock.map ((prod) => prod.nombre)
 
 console.log(listaAretesConStock)
 
-console.log (listaNombre)
+console.log (listaNombre)*/
 
 
 

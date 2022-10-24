@@ -1,9 +1,14 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body{
-    background-color: aqua;
+    background-color:#edede9;
 }
 
 header{
-    background-color: beige;
+    background-color:#ffdab9;
     display: flex;
     justify-content: center;
     height: 150px;
@@ -11,11 +16,11 @@ header{
 
 }
 .titulo{
-    color:red;
+    color:#ff70a6;
     margin-top: 30px;
 }
 .subtitulo{
-    color: goldenrod;
+    color: #f72585;
     margin-top: 30px;
 }
 
@@ -23,25 +28,30 @@ nav ul{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color:wheat;
+    background-color:#fcd5ce;
     height: 100px;
     margin-top: -22px
 }
 nav li {
     list-style-type: none;
+    
     display: inline;
     margin-top: 40px;
 
 }
  nav a {
     text-decoration: none;
+    color: #ff70a6;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
  }
 
  footer{
-    background-color: goldenrod;
+    background-color: #fcd5ce;
     margin-top: 250px;
     height: 50px;
     padding: 50px;
+    padding-left: 450px;
     padding-bottom: 50px;
 
  }
@@ -53,18 +63,59 @@ nav li {
     gap: 20px;
 }
 
-.pulseras{
-    border: 5px solid gold;
-    height: 200px;
-    width: 300px;
+#items{
+    gap: 15px;
+
 }
 
-.pulserasHombre{
+#catalogoRelojes {
     display: flex;
-    gap: 20px;
-}
-.pulserasMujer{
-    display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
+
+.imagenReloj {
+    width: 100px;
+    height: 100px;
+}
+
+#botonCompra {
+    background-color: blueviolet;
+    color: white;
+    border-radius: 5px;
+    border-color:#ccd5ae;
+    
+}
+/*Tamaño de las imagenes de las cards*/
+.img-fluid {
+    width: 200px;
+    height: 150px;
+
+}
+/*Tamaño de la imagen cuando compran*/
+.imagenCompra {
+    width:100px;
+    height: 100px;
+}
+
+.btn {
+    background-color: #f7d6e0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color:#323031;
+}
+
+
+
+
+.card {
+    margin-top: 25px;
+    margin-left: 20px;
+    background-color:#e2fdff;
+    border-radius: 15px;
+}
+
+.list-group-item {
+    background-color:#e2fdff;
+
+}
