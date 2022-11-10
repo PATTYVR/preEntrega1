@@ -1,0 +1,113 @@
+ [
+    {
+      "id": 1,
+       "nombre": "Pulsera1",
+       "imagen": "../imagenes/3.gif",
+       "precio": 150,
+       "cantidad": 1
+   },
+ 
+   {
+       "id": 2,
+       "nombre": "Pulsera2",
+       "imagen":  "../imagenes/9.jfif",
+       "precio": 200,
+       "cantidad": 1
+   },
+   {
+       "id": 3,
+       "nombre": "Pulsera3",
+       "imagen": "../imagenes/5.jfif",
+       "precio": 230,
+       "cantidad": 1
+   },
+   {
+       "id": 4,
+       "nombre": "Pulsera4",
+       "imagen": "../imagenes/7.jpg",
+       "precio": 250,
+       "cantidad": 1
+   },
+ 
+   {
+    "id": 5,
+    "nombre": "Pulsera5",
+    "imagen": "../imagenes/8.gif",
+    "precio": 150,
+    "cantidad": 1
+ },
+
+ {
+    "id": 6,
+    "nombre": "Cadena1",
+    "imagen": "../imagenes/cadena1.jpg",
+    "precio": 320,
+    "cantidad": 1
+ },
+ {
+    "id": 7,
+    "nombre": "Cadena2",
+    "imagen": "../imagenes/cadena2.jpg",
+    "precio":340,
+    "cantidad": 1
+ },
+ 
+ {
+    "id": 8,
+    "nombre": "Cadena3",
+    "imagen": "../imagenes/cadena3.jpg",
+    "precio": 360,
+    "cantidad": 1
+ },
+ {
+    "id": 9,
+    "nombre": "Cadena4",
+    "imagen": "../imagenes/cadena4.jpg",
+    "precio": 350,
+    "cantidad": 1
+ },
+ {
+    "id": 10,
+    "nombre": "Cadena5",
+    "imagen": "../imagenes/cadena5.jpg",
+    "precio": 250,
+    "cantidad": 1
+ },
+ {
+    "id": 11,
+    "nombre": "Sortija1",
+    "imagen": "../imagenes/sortija1.jpg",
+    "precio": 55,
+    "cantidad": 1
+ },
+ {
+    "id": 12,
+    "nombre": "Sortija2",
+    "imagen": "../imagenes/sortija2.jpg",
+    "precio": 70,
+    "cantidad": 1
+ },
+ {
+    "id": 13,
+    "nombre": "Sortija3",
+    "imagen": "../imagenes/sortija3.jpg",
+    "precio": 60,
+    "cantidad": 1
+ },
+ {
+    "id": 14,
+    "nombre": "Sortija4",
+    "imagen": "../imagenes/sortija4.jpg",
+    "precio": 70,
+    "cantidad": 1
+ },
+ {
+    "id": 15,
+    "nombre": "Sortija5",
+    "imagen": "../imagenes/sortija5.jpg",
+    "precio": 60,
+    "cantidad": 1
+ }
+ 
+
+ ]

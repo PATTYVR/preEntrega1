@@ -1,66 +1,95 @@
-const listaDeProductos = [
-   {
-      id: 1,
-      nombre: 'Pulsera1',
-      imagen: '../imagenes/6.jfif',
-      precio: 150,
-      stock: 10
-  },
-  {
-      id: 2,
-      nombre: "Pulsera2",
-      imagen: '../imagenes/3.gif',
-      precio: 120,
-      stock: 10
-  },
-  {
-      id: 3,
-      nombre: "Pulsera3",
-      imagen: '../imagenes/4.jpg',
-      precio: 200,
-      stock: 10
-  },
-  {
-      id: 4,
-      nombre: "Pulsera4",
-      imagen: '../imagenes/5.jfif',
-      precio: 230,
-      stock: 1
-  },
-  {
-      id: 5,
-      nombre: "Pulsera5",
-      imagen: '../imagenes/7.jpg',
-      precio: 250,
-      stock: 12
-  },
-
-  {
-   id: 6,
-   nombre: "Pulsera6",
-   imagen: '../imagenes/8.gif',
-   precio: 50,
-   stock: 12
-},
-
-{
-    id: 7,
-    nombre: "Pulsera7",
-    imagen: '../imagenes/9.jfif',
-    precio: 50,
-    stock: 12
- }
-];
-
-let catalog = document.getElementById('items')
-let cartList = document.getElementById('carrito')
-let buttonEmpty = document.getElementById('boton-vaciar')
-let totalValue = document.getElementById('total')
+const catalogo = document.getElementById('catalogo');
+const verCarrito = document.getElementById("verCarrito");
+const modalContainer = document.getElementById("modal-container");
+const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 
-let cart = []  
 
-buttonEmpty.addEventListener('click', emptyButtonHandler)
+
+
+let carrito = JSON.parse(localStorage.getItem("carrito")) ||  [];
+
+
+fetch('data.json')
+.then((response) => response.json())
+.then((lista) => {
+    lista.forEach((product) => {
+        const div = document.createElement("div");
+        div.className= "card"
+        div.innerHTML = `<h3 class="titulo-producto">${product.nombre}</h3>
+        <img class="imagenesJoyas" src=${product.imagen}>
+        <p class=precio-producto>Precio: ${product.precio}</p>
+       `;
+
+        catalogo.append(div);
+
+        let comprar = document.createElement("button");
+        comprar.className = "btn-compra";
+        comprar.innerText="comprar";
+
+        div.append(comprar);
+
+
+        comprar.addEventListener("click", () => {
+            const repeat = carrito.some ((repeatProduct) => repeatProduct.id === product.id);
+
+            if(repeat){
+                carrito.map((prod) => {
+                    if(prod.id === product.id) {
+                        prod.cantidad++;
+                
+                    }
+                });
+            } else{
+
+            carrito.push({
+                id : product.id,
+                imagen: product.imagen,
+                nombre: product.nombre,
+                precio: product.precio,
+                cantidad: product.cantidad,
+            });
+             }
+
+            console.log(carrito);
+            carritoCounter();
+            saveLocal();
+
+        });
+
+    });
+
+
+});
+
+    const saveLocal = () => {
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+    };
+
+ 
+
+
+
+
+
+
+     
+
+
+  
+    
+
+   
+
+
+
+
+
+
+
+  //get item
+
+/*buttonEmpty.addEventListener('click', emptyButtonHandler)
 
 
 loadCartFromStorage()
@@ -207,7 +236,7 @@ function loadCartFromStorage(){
     if(localStorage.getItem('cart') !== null){
     cart = JSON.parse(localStorage.getItem('cart'))
     }
-}
+}*/
 
 
 

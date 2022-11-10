@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;700&display=swap');
 * {
     padding: 0;
     margin: 0;
 }
 
 body{
-    background-color:#edede9;
+    background-color:whitesmoke;
+
 }
 
 header{
-    background-color:#ffdab9;
+    background-color:#ff70a6;
     display: flex;
     justify-content: center;
     height: 150px;
@@ -16,19 +18,20 @@ header{
 
 }
 .titulo{
-    color:#ff70a6;
+    color:white;
     margin-top: 30px;
 }
 .subtitulo{
-    color: #f72585;
+    color: white;
     margin-top: 30px;
+    font-family:'Times New Roman', Times, serif;
 }
 
 nav ul{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color:#fcd5ce;
+    background-color:white;
     height: 100px;
     margin-top: -22px
 }
@@ -47,12 +50,13 @@ nav li {
  }
 
  footer{
-    background-color: #fcd5ce;
+    background-color:  #ff70a6;
     margin-top: 250px;
     height: 50px;
-    padding: 50px;
     padding-left: 450px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    margin-bottom: 0px;
 
  }
  
@@ -68,15 +72,11 @@ nav li {
 
 }
 
-#catalogoRelojes {
-    display: flex;
-    gap: 15px;
-}
-
-
-.imagenReloj {
-    width: 100px;
-    height: 100px;
+.ver-carrito{
+    cursor: pointer;
+    color: #f72585;
+    font-size: 35px;
+    
 }
 
 #botonCompra {
@@ -111,11 +111,210 @@ nav li {
 .card {
     margin-top: 25px;
     margin-left: 20px;
-    background-color:#e2fdff;
-    border-radius: 15px;
+    background-color:white;
+    border-radius: 5px;
 }
 
 .list-group-item {
     background-color:#e2fdff;
 
 }
+
+
+.imagenesJoyas{
+    width: 200px;
+    height: 200px;
+}
+
+#catalogo{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 15px;
+}
+
+.ver-carrito {
+    padding-top: 30px;
+
+}
+
+.btn-compra{
+
+    background-color: black;
+    border: 2px solid  #f72585;
+    color: white;
+}
+
+.imagen-carrito{
+    width: 100px;
+    height: 100px;
+    border: 2px solid gold;
+}
+.fotoInicio{
+    display: flex;
+    width: 90%;
+    text-align: center;
+    padding: 50px;
+    margin: auto;
+}
+
+
+
+.modal-container {
+    width: 80%;
+    margin: 0 10%;
+    max-height: 88vh;
+    color: #f72585;
+    background-color: #FCE2DB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  
+
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+
+}
+
+.modal-container::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+    color: #fff;
+    width: 100%;
+}
+
+
+
+.modal-header-button {
+    cursor: pointer;
+    color:  #f72585 ;
+}
+
+.modal-container > .modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
+
+}
+
+.modal-container > div > img {
+    height: 120px;
+    width: 120px;
+}
+
+.total-content {
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.eliminar-product{
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border: 3px solid  #f72585;
+
+}
+
+
+.cantidad-carrito {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 8px;
+    top: initial;
+    position: absolute;
+    display: none;
+  
+}
+
+.sumar {
+    cursor: pointer;
+   
+}
+
+.restar {
+    cursor: pointer;
+   
+}
+
+
+.vaciar-carrito{
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border: 3px solid  #f72585;
+    font-size: 25px;
+}
+
+.fotoInicio-sec{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 15px;
+    
+}
+.caja {
+    position: relative;
+    display: inline-block;
+}
+
+.nombreParrafo{
+    color: #f72585;
+    font-size: 40px;
+    position: absolute;
+    top: 40px;
+    left: 20%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    
+ 
+}
+.imagen-sec {
+    width: 300px;
+    height: 200px;
+
+}
+
+.cajaInicio{
+    position: relative;
+    display: inline-block;
+
+}
+
+.nombreInicio{
+    color: #f72585;
+    font-size: 40px;
+    position: absolute;
+    top: 40px;
+    left: 20%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.titulo-producto{
+    color: #f72585;
+    font-size:30px;
+    text-align: center;
+
+}
+.precio-producto{
+    color: #ff70a6;
+    font-style:normal;
+    fill-opacity: initial;
+}
+
+
+
